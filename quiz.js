@@ -87,8 +87,13 @@ function nextQuestion() {
     document.getElementById('options-container').innerHTML = '<button class="bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" onClick="window.location.reload();">دووبارەکردنەوە</button>';
     document.getElementById('prsyarnum').style.display = 'none';
     document.getElementById('score').style.display = '';
-    document.getElementById('score-container').innerText = `وەڵامە ڕاستەکان \n ${correctwords.join( '\n')}`;
-  document.getElementById('score-containerf').innerText = `وەڵامە هەڵەکان \n ${wrongwords.join(  '\n')}`;
- 
+    document.getElementById('score-container').innerHTML = 
+    `<span class="bg-white rounded-lg px-2" style="color: green !important;">وەڵامە ڕاستەکان </span> 
+    
+    <br> ${correctwords.join( '<br>')}`;
+  document.getElementById('score-containerf').innerHTML = 
+  `<span class="bg-white rounded-lg px-2" style="color: red !important;">وەڵامە هەڵەکان </span> 
+  
+  <br> ${wrongwords.join( '<br>')}`;
   }
 }
